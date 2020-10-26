@@ -21,23 +21,9 @@
    Graphical settings
  *====================*/
 
-/* Maximal horizontal and vertical resolution to support by the library.*/
-#if defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE) && defined (CONFIG_LVGL_DISPLAY_ORIENTATION_PORTRAIT)
-    #define LV_VER_RES_MAX          (CONFIG_LVGL_DISPLAY_WIDTH)
-    #define LV_HOR_RES_MAX          (CONFIG_LVGL_DISPLAY_HEIGHT)
-#elif defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE) && defined (CONFIG_LVGL_DISPLAY_ORIENTATION_PORTRAIT_INVERTED)
-    #define LV_VER_RES_MAX          (CONFIG_LVGL_DISPLAY_WIDTH)
-    #define LV_HOR_RES_MAX          (CONFIG_LVGL_DISPLAY_HEIGHT)
-#elif defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE) && defined (CONFIG_LVGL_DISPLAY_ORIENTATION_LANDSCAPE)
-    #define LV_HOR_RES_MAX          (CONFIG_LVGL_DISPLAY_WIDTH)
-    #define LV_VER_RES_MAX          (CONFIG_LVGL_DISPLAY_HEIGHT)
-#elif defined (CONFIG_LVGL_PREDEFINED_DISPLAY_NONE) && defined (CONFIG_LVGL_DISPLAY_ORIENTATION_LANDSCAPE_INVERTED)
-    #define LV_HOR_RES_MAX          (CONFIG_LVGL_DISPLAY_WIDTH)
-    #define LV_VER_RES_MAX          (CONFIG_LVGL_DISPLAY_HEIGHT)
-#else
-    #define LV_HOR_RES_MAX          (CONFIG_LVGL_DISPLAY_WIDTH)
-    #define LV_VER_RES_MAX          (CONFIG_LVGL_DISPLAY_HEIGHT)
-#endif
+#define LV_HOR_RES_MAX          (240)
+#define LV_VER_RES_MAX          (240)
+
 
 /* Color depth:
  * - 1:  1 byte per pixel
@@ -94,7 +80,7 @@
 /* Dot Per Inch: used to initialize default sizes.
  * E.g. a button with width = LV_DPI / 2 -> half inch wide
  * (Not so important, you can adjust it to modify default sizes and spaces)*/
-#define LV_DPI              130     /*[px]*/
+#define LV_DPI              100     /*[px]*/
 
 /* The the real width of the display changes some default values:
  * default object sizes, layout of examples, etc.
